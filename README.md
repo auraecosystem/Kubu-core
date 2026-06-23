@@ -1,5 +1,4 @@
-
-![](https://creativecommons.org/publicdomain/mark/1.0/)
+[](https://creativecommons.org/publicdomain/mark/1.0/)
 
 # KUBU Core
 
