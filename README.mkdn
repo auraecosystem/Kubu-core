@@ -1,3 +1,6 @@
+
+![](https://creativecommons.org/publicdomain/mark/1.0/)
+
 # KUBU Core
 
 KUBU is a Proof-of-Work cryptocurrency focused on human-readable nicknames.
