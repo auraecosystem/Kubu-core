@@ -1,0 +1,176 @@
+# Getting Started with whitebit KUBU Core
+
+This guide helps you launch a node, connect your wallet, and verify the setup.
+
+## 1) Install or Build
+
+- See [../INSTALL.md](../INSTALL.md) for dependency and build steps.
+- Expected binaries:
+  - `kubud`
+  - `kubu-cli`
+  - `kubu-tx`
+  - `kubu-qt`
+
+## 2) Start a Node
+
+Mainnet:
+
+```bash
+kubud -daemon
+```
+
+Testnet:
+
+```bash
+kubud -testnet -daemon
+```
+
+Regtest (for local development):
+
+```bash
+kubud -regtest -daemon
+```
+
+## 3) Verify Node Status
+
+```bash
+kubu-cli getblockchaininfo
+kubu-cli getnetworkinfo
+```
+
+For testnet/regtest, add the network flag:
+
+```bash
+kubu-cli -testnet getblockchaininfo
+kubu-cli -regtest getblockchaininfo
+```
+
+## 4) Wallet Basics
+
+Create a receiving address:
+
+```bash
+kubu-cli getnewaddress
+```
+
+Check balance:
+
+```bash
+kubu-cli getbalance
+```
+
+## 5) Regtest Quick Mining (for local tests)
+
+Generate blocks to a local address:
+
+```bash
+ADDR=$(kubu-cli -regtest getnewaddress)
+kubu-cli -regtest generatetoaddress 101 "$ADDR"
+kubu-cli -regtest getbalance
+```
+
+## 6) Next Steps
+
+- Nickname usage examples: [how-to-use.md](how-to-use.md)
+- RPC command list:
+
+```bash
+kubu-cli help
+kubu-cli help sendtonickname
+```
+
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.whitebit.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Market Data
+
+> Public market data endpoints cover server status, trading pairs, order books, and price data — no authentication required.
+
+Browse publicly available market data endpoints — no authentication required.
+
+For general API conventions (base URL, error format, rate limits), see the [API Reference Overview](/api-reference/overview).
+
+***
+
+## Server & Status
+
+Endpoints for checking server health and status:
+
+<CardGroup cols={2}>
+  <Card title="Server Status" icon="signal" href="/api-reference/market-data/server-status">
+    Check current API life-state
+  </Card>
+
+  <Card title="Server Time" icon="clock" href="/api-reference/market-data/server-time">
+    Get current server time
+  </Card>
+
+  <Card title="Maintenance Status" icon="wrench" href="/api-reference/market-data/maintenance-status">
+    Check platform maintenance status
+  </Card>
+</CardGroup>
+
+***
+
+## Markets & Assets
+
+Endpoints for retrieving market and asset information:
+
+<CardGroup cols={2}>
+  <Card title="Market Info" icon="circle-info" href="/api-reference/market-data/market-info">
+    Get information about spot and futures markets
+  </Card>
+
+  <Card title="Market Activity" icon="chart-line" href="/api-reference/market-data/market-activity">
+    Get 24-hour pricing and volume summary
+  </Card>
+
+  <Card title="Asset Status List" icon="coins" href="/api-reference/market-data/asset-status-list">
+    Get asset withdrawal and deposit status
+  </Card>
+
+  <Card title="Collateral Markets List" icon="list" href="/api-reference/market-data/collateral-markets-list">
+    Get markets available for collateral trading
+  </Card>
+
+  <Card title="Available Futures Markets List" icon="rocket" href="/api-reference/market-data/available-futures-markets-list">
+    Get available futures markets list
+  </Card>
+</CardGroup>
+
+***
+
+## Order Book & Trades
+
+Endpoints for order book data and recent trading activity:
+
+<CardGroup cols={2}>
+  <Card title="Orderbook" icon="book" href="/api-reference/market-data/orderbook">
+    Get current order book with bids and asks
+  </Card>
+
+  <Card title="Depth" icon="layer-group" href="/api-reference/market-data/depth">
+    Get depth price levels within ±2% of market price
+  </Card>
+
+  <Card title="Recent Trades" icon="handshake" href="/api-reference/market-data/recent-trades">
+    Get recently executed trades for a market
+  </Card>
+</CardGroup>
+
+***
+
+## Fees & Funding
+
+Endpoints for fee information and funding rates:
+
+<CardGroup cols={2}>
+  <Card title="Fee" icon="percent" href="/api-reference/market-data/fee">
+    Get deposit and withdrawal fees and limits
+  </Card>
+
+  <Card title="Funding History" icon="money-bill-transfer" href="/api-reference/market-data/funding-history">
+    Get funding rate history for futures markets
+  </Card>
+</CardGroup>
