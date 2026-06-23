@@ -1,0 +1,25 @@
+cff-version: "1.2.0"
+message: "If you use this software, please cite it as below."
+title: "Kubu-core"
+version: 1.0.0
+date-released: 2026-06-23
+url: "https://github.com/auraecosystem/Kubu-core"
+
+authors:
+  - family-names: "Seriki"
+    given-names: "Yakub"
+    orcid: "https://orcid.org/0009-0007-9853-0411"
+
+doi: 10.5281/zenodo.1234567
+
+keywords:
+  - blockchain
+  - proof-of-work
+  - distributed-ledger
+  - artificial-intelligence
+  - edge-ai
+  - hierarchical-reasoning
+  - kv-cache-persistence
+  - trust-tensors
+  - fractal-architecture
+  - web4-ai
