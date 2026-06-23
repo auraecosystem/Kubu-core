@@ -5,6 +5,9 @@ Instead of sending only to long wallet addresses, users can send payments to
 active nicknames and optionally include memo tags for exchange/service routing.
 
 ## Project Overview
+Kubu A decentralized network where people, businesses,
+services, and applications can own nicknames
+and use them as payment and identity endpoints.
 
 KUBU Core is the reference node and wallet implementation for the KUBU network.
 It includes:
