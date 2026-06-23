@@ -17,3 +17,6 @@ autoreconf --install --force --warnings=all
   --enable-ai \
   --with-postgresql \
   --with-redis
+npx create-eth@latest -e metamask/gator-extension kubu
+cd kubu-core/packages/nextjs
+cp .env.example .env.local
