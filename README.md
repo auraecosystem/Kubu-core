@@ -74,16 +74,21 @@ kubu-cli ai explaintransaction TXID
 Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md)
 before opening pull requests.
 
+
+
+[KUBU](explorer.kubucoin.org$)
+
 ## Communities
 
-- Website: [kubucoin.org](https://kubucoin.org)
-- Discord: [https://kubucoin.org/discord](https://kubucoin.org/discord)
+- Website: [kubucoin.org](https://kubucoin.org/)
+- Discord: [https://kubucoin.org/discord](https://kubucoin.org/discord#)
 
 ## License
 
 See LICENSE file.
 
-## Support
+> ## Support
 
-    GitHub Issues: https://github.com/kubucoindev/kubu/issues
-    Documentation: See docs/ directory
+
+    [GitHub Issues:](https://github.com/kubucoindev/kubu/issues)
+    Documentation: See docs/directory
