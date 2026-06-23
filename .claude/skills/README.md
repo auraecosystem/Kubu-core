@@ -64,6 +64,17 @@ Default ports configured in KUBU Core:
 Do not expose RPC ports to the public internet.
 
 ```.q
+KUBU Network
+
+├── Currency
+├── Identity
+├── Naming
+├── Payments
+├── Reputation
+├── Messaging
+├── AI Agent Accounts
+├── Commerce
+└── Governance
 kubu-cli ai explaintransaction TXID
 ```
 ## Getting Started
