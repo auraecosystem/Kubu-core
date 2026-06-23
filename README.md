@@ -60,6 +60,9 @@ Default ports configured in KUBU Core:
 
 Do not expose RPC ports to the public internet.
 
+```.q
+kubu-cli ai explaintransaction TXID
+```
 ## Getting Started
 
 - Build/install basics: [INSTALL.md](INSTALL.md)
