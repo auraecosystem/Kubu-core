@@ -1,0 +1,68 @@
+name: Deploy to IPFS
+
+permissions:
+  contents: read
+  pull-requests: write
+  statuses: write
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to IPFS
+        uses: ipshipyard/ipfs-deploy-action@v1
+        id: deploy
+        with:
+          path-to-deploy: dist # Change this to your build output directory
+          storacha-key: ${{ secrets.STORACHA_KEY }}
+          storacha-proof: ${{ secrets.STORACHA_PROOF }}
+          github-token: ${{ github.token }}
+          - name: Deploy to IPFS
+  
+     - uses: ipshipyard/ipfs-deploy-action@v1
+  with:
+    # ... other inputs ...
+    kubo-api-url: ${{ secrets.KUBO_API_URL }}
+    kubo-api-auth: ${{ secrets.KUBO_API_AUTH }}
+    - name: Deploy to IPFS
+  uses: ipshipyard/ipfs-deploy-action@v1
+  with:
+    # ... other inputs ...
+    kubo-version: 'v0.42.0' # Default, change if needed
+    ipfs-add-options: '--cid-version 1 --chunker size-1048576' # Default options
+
+    - name: Deploy to IPFS
+  uses: ipshipyard/ipfs-deploy-action@v1
+  with:
+    # ... other inputs ...
+    cluster-url: ${{ secrets.CLUSTER_URL }}
+    cluster-user: ${{ secrets.CLUSTER_USER }}
+    cluster-password: ${{ secrets.CLUSTER_PASSWORD }}
+    - name: Deploy to IPFS
+  uses: ipshipyard/ipfs-deploy-action@v1
+  with:
+    # ... other inputs ...
+    filebase-bucket: 'kubu'
+    filebase-access-key: ${{ secrets.FILEBASE_ACCESS_KEY }}
+    filebase-secret-key: ${{ secrets.FILEBASE_SECRET_KEY }}
